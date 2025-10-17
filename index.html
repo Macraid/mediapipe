@@ -1,24 +1,111 @@
-#生成一個網頁，內容是一個5*5的表格，每一個依序填入數字1到25，亂數排序
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>5x5 隨機表格</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>座位表</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table border="1">
-        <tbody>
-            {% set numbers = range(1, 26) %}
-            {% set shuffled = numbers|shuffle %}
-            {% for i in range(5) %}
-            <tr>
-                {% for j in range(5) %}
-                <td>{{ shuffled[i * 5 + j] }}</td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <h1>座位表</h1>
+    <div class="container">
+        <div class="seating-chart">
+            <table>
+                <!-- 6 rows -->
+                <tr>
+                    <!-- 7 columns -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="labels">
+            <!-- 30 labels -->
+            <div class="label" draggable="true" id="label-1">標籤 1</div>
+            <div class="label" draggable="true" id="label-2">標籤 2</div>
+            <div class="label" draggable="true" id="label-3">標籤 3</div>
+            <div class="label" draggable="true" id="label-4">標籤 4</div>
+            <div class="label" draggable="true" id="label-5">標籤 5</div>
+            <div class="label" draggable="true" id="label-6">標籤 6</div>
+            <div class="label" draggable="true" id="label-7">標籤 7</div>
+            <div class="label" draggable="true" id="label-8">標籤 8</div>
+            <div class="label" draggable="true" id="label-9">標籤 9</div>
+            <div class="label" draggable="true" id="label-10">標籤 10</div>
+            <div class="label" draggable="true" id="label-11">標籤 11</div>
+            <div class="label" draggable="true" id="label-12">標籤 12</div>
+            <div class="label" draggable="true" id="label-13">標籤 13</div>
+            <div class="label" draggable="true" id="label-14">標籤 14</div>
+            <div class="label" draggable="true" id="label-15">標籤 15</div>
+            <div class="label" draggable="true" id="label-16">標籤 16</div>
+            <div class="label" draggable="true" id="label-17">標籤 17</div>
+            <div class="label" draggable="true" id="label-18">標籤 18</div>
+            <div class="label" draggable="true" id="label-19">標籤 19</div>
+            <div class="label" draggable="true" id="label-20">標籤 20</div>
+            <div class="label" draggable="true" id="label-21">標籤 21</div>
+            <div class="label" draggable="true" id="label-22">標籤 22</div>
+            <div class="label" draggable="true" id="label-23">標籤 23</div>
+            <div class="label" draggable="true" id="label-24">標籤 24</div>
+            <div class="label" draggable="true" id="label-25">標籤 25</div>
+            <div class="label" draggable="true" id="label-26">標籤 26</div>
+            <div class="label" draggable="true" id="label-27">標籤 27</div>
+            <div class="label" draggable="true" id="label-28">標籤 28</div>
+            <div class="label" draggable="true" id="label-29">標籤 29</div>
+            <div class="label" draggable="true" id="label-30">標籤 30</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
