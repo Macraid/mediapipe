@@ -1,3 +1,22 @@
-#生成一個網頁，內容是一個5*5的空表格
+#生成一個網頁，內容是一個5*5的表格，每一個依序填入數字1到25，並且設定語言為繁體中文
 <!DOCTYPE html>
 <html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>5x5 表格</title>
+</head>
+<body>
+    <table border="1">
+        <tbody>
+            {% for i in range(5) %}
+            <tr>
+                {% for j in range(5) %}
+                <td>{{ i * 5 + j + 1 }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
